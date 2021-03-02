@@ -15,8 +15,13 @@ class basic
 
 	void fn_outside_class();
 	void fn_outside_class2();
+
+	//friend function declared
+	friend void friend_fn();
+
 	void basic_function()
 	{
+		class basic x;
 		cout<<"this is a public function \n";
 		priv_function();
 	}
@@ -32,6 +37,14 @@ inline void basic :: fn_outside_class2()
 	cout<<"fn outside class which is inline\n";
 	
 }
+
+void friend_fn()
+{
+	class basic x;
+	cout<<"this is friend function calling a function it calls a private member below\n";
+	x.priv_function();
+
+}
 int main()
 {
 	class basic x;
@@ -39,6 +52,7 @@ int main()
 	x.basic_function();
 	x.fn_outside_class();
 	x.fn_outside_class2();
+	friend_fn();
 	return 0;
 
 }
