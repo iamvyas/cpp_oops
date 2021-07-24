@@ -90,12 +90,25 @@ public:
 	Graph(int V); // Constructor 
 
 	// function to add an edge to graph 
-	void addEdge(int v, int w); 
+	void addEdge(int v, int w);
+
+	void print();
 
 	// DFS traversal of the vertices 
 	// reachable from v 
 	void DFS(int v); 
-}; 
+};
+/*
+void Graph::print(){
+	int i=0;
+	for(i=0;i<sizeof(adj);i++)
+	{
+		cout<<"\n"<<adj[i];
+		return;
+	}
+}
+*/
+
 
 Graph::Graph(int v_no) 
 { 
@@ -105,7 +118,8 @@ Graph::Graph(int v_no)
 
 void Graph::addEdge(int v, int w) 
 { 
-	adj[v].push_back(w); // Add w to v’s list. 
+	adj[v].push_back(w); // Add w to v’s list.
+	cout<<""; 
 } 
 
 void Graph::DFSUtil(int v, bool visited[]) 
@@ -155,8 +169,8 @@ int main()
     } 
 
 	cout << "\nFollowing is Depth First Traversal"
-			" (starting from vertex 2) \n"; 
-	g.DFS(2); 
+			" (starting from vertex 0) \n"; 
+	g.DFS(0); 
 
 	return 0; 
 } 
