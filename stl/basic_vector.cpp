@@ -1,4 +1,5 @@
-//saved check done
+//this program contains the basic representation of vectos and list
+
 #include <cmath>
 #include <cstdio>
 #include <vector>
@@ -14,8 +15,7 @@ void basic_v(){
         {1, 2, 3},
         {4, 5, 6},
         {7, 8, 9}
-    };
-    /* Enter your code here. Read input from STDIN. Print output to STDOUT */ 
+    }; 
     vector<vector<int>> *adj; 
     cout<<vect[1][2]<<endl;
     adj=&vect;
@@ -88,10 +88,13 @@ void basic_2(){
 
 int main() {
     int x,v,w;
+    //vector as normal
     basic_v();
     cout<<endl;
+    //list accessed through pointers
     basic_l();
     cout<<endl;
+    //3d vector
     basic_2();
 
     return 0;
